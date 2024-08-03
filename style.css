@@ -1,5 +1,4 @@
 @font-face { font-family: Panton\ Black\ Caps; src: url(Panton\ Black\ Caps.ttf); }
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 *{
     margin: 0px;
     padding: 0px;
@@ -9,7 +8,7 @@
     background-color: white;
 }
 body {
-    background-image: url("/images/background.png");
+    background-image: url("https://wallpapercave.com/wp/wp2737816.jpg");
     background-size: cover;
     background-attachment: fixed;
 }
