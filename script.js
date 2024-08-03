@@ -33,7 +33,7 @@ function findBadge(t) {
     }
 }
 document.addEventListener("DOMContentLoaded", async ()=>{
-    await fetch("https://discordlookup.mesalytic.moe/v1/user/210608545618460672")
+    await fetch("https://discordlookup.mesalytic.moe/v1/user/1122586453499727922")
     .then(res => res.json())
     .then((res)=>{
         pfp.src = res.avatar.link;
