@@ -1,0 +1,163 @@
+@font-face { font-family: Panton\ Black\ Caps; src: url(Panton\ Black\ Caps.ttf); }
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+}
+*::selection {
+    color:black;
+    background-color: white;
+}
+body {
+    background-image: url("/images/background.png");
+    background-size: cover;
+    background-attachment: fixed;
+}
+img::selection {
+    color:transparent;
+    background-color: transparent;
+}
+.box {
+    text-align: center;
+    width: 400px;
+    height: 440px;
+    backdrop-filter: blur(25px);
+    border-radius: 20px;
+    margin-left: calc(50% - 200px);
+    margin-top: 100px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.39),rgba(0, 0, 0, 0.39));
+}
+.box .banner {
+    width: 100%;
+    height: 100px;
+    margin-top: -20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.box #pfp {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    transition: transform 2s;
+    margin-top: -40px;
+}
+.box #name {
+    font-family: "Panton Black Caps", sans-serif;
+    background: linear-gradient(110deg,rgb(255, 0, 0),rgb(17, 0, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: nameColored 5s linear infinite;
+}
+.box #name::selection {
+    background: transparent;
+}
+@keyframes nameColored {
+    from {
+      -webkit-filter: hue-rotate(0deg);
+    }
+    to {
+      -webkit-filter: hue-rotate(360deg);
+    }
+}
+.box .badges {
+    width: 10%;
+    background-color: transparent;
+    border-radius: 10px;
+    margin-left: calc(50% - 5%);
+}
+.box .badges #badge:hover {
+    cursor: pointer;
+}
+.box #description {
+    font-family: 'Source Code Pro',sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color:black;
+    animation: descriptionColored 5s linear infinite;
+}
+@keyframes descriptionColored {
+    from {
+        color:rgb(231, 229, 229);
+    }
+    to {color:rgba(199, 199, 199, 0.726);}
+}
+.box .connections #git-hub,#telegram,#x,#twitch {
+    transition: transform 1s;
+    color:white;
+    margin-left: 4px;
+}
+.box .connections #git-hub {
+    margin-left: 0px;
+}
+.box .connections #git-hub:hover {
+    transform: scale(1.2);
+    color:#6e5494;
+}
+.box .connections #telegram:hover {
+    transform: scale(1.2);
+    color:rgb(0, 153, 255);
+}
+.box .connections #x:hover {
+    transform: scale(1.2);
+    color:gray;
+}
+.box .connections #twitch:hover {
+    transform: scale(1.2);
+    color:#6441a5;
+}
+.box .status {
+    width: 80%;
+    background-color: black;
+    margin-left: calc(50% - 40%);
+    border-radius: 20px;
+    height: 80px;
+}
+.box .status #discord-pfp {
+    margin-left: -60%;
+    margin-top: 10px;
+}
+.status .discord-info {
+    margin-top: -90px;
+}
+.status .discord-info #ds-name {
+    color:white;
+    font-family: "Panton Black Caps", sans-serif;
+}
+@media screen and (max-width: 500px) {
+    .box {
+        width: 85%;
+        margin-left: calc(50% - 42.5%);
+    }
+}
+@media screen and (max-width: 360px) {
+    .status .discord-info {
+        margin-left: 20px;
+    }
+    .box {
+        height: 490px;
+    }
+}
+@media screen and (max-width: 310px) {
+    .box {
+        height: 560px;
+    }
+    .box .connections #twitch {
+        margin-left: 0px;
+    }
+}
+@media screen and (max-width: 180px) {
+    .box {
+        height: 60px;
+    }
+    .box .connections #git-hub,#telegram,#x,#twitch {
+        transition: transform 1s;
+        color:white;
+        margin-left: 0px;
+    }
+}
+@media screen and (max-width: 145px) {
+    .box {
+        margin-top: 50px;
+        height: 670px;
+    }
+}
